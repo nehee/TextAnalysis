@@ -5,11 +5,11 @@ import Navbar from './components/Navbar.js';
 import TextForm from './components/TextForm.js';
 import Alert from './components/Alert';
 
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const[Mode, setMode] = useState('light');
@@ -44,21 +44,21 @@ function App() {
   return (
   <>
  {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
- <BrowserRouter>
+ {/* <BrowserRouter> */}
  <Navbar title="TextAnalysis" mode = {Mode} toggleMode = {toggleMode} />
  <Alert alert = {alert}/>
  <div className="container my-3">
  
  {/* <About  mode = {Mode}/> */}
-
-<Routes>
+ {<TextForm showAlert = {showAlert} heading="Enter the text to analyze below..."  mode = {Mode} />}  
+{/* <Routes> */}
           {/* <Route exact path="/about" element={<About  mode = {Mode}/>} /> */}
           
-          < Route exact path="/"
+          {/* < Route exact path="/"
             element= {<TextForm showAlert = {showAlert} heading="Enter the text to analyze below..."  mode = {Mode} />} /> 
-          </Routes>
+          </Routes> */}
 </div>
-          </BrowserRouter>
+          {/* </BrowserRouter> */}
   </>
   );
 }
